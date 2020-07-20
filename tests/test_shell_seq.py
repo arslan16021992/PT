@@ -1,5 +1,6 @@
 import unittest
-# import subprocess
+import subprocess
+
 import shell_seq
 
 
@@ -42,10 +43,11 @@ class ShellCheck(unittest.TestCase):
         shell_seq.shell_sort(self.data_6)
         self.assertEqual(self.data_6, [-5, -4, -3, -2, -1])
 
-        # run = subprocess.Popen(['python', 'D:/PT/shell_seq.py'], stdout=subprocess.PIPE)
-        # output = run.stdout.read()
-        # print(output)
-        # self.assertIsNotNone(output)
+        run = subprocess.Popen(['bash', 'python D:/PT/shell_seq.py'], stdout=subprocess.PIPE, shell=True)
+        output = run.stdout.read()
+        print(output)
+        # print(run.stdout.decode('utf-8'))
+        self.assertIsNotNone(output)
 
 
 if __name__ == "__main__":
