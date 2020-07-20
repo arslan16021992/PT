@@ -42,11 +42,10 @@ class ShellCheck(unittest.TestCase):
         shell_seq.shell_sort(self.data_6)
         self.assertEqual(self.data_6, [-5, -4, -3, -2, -1])
 
-        # run = subprocess.Popen('python D:/RND/credit_robot-ru/tests/test_integration/shell_seq.py',
-        #                        stdout=subprocess.PIPE, shell=True)
+        # run = subprocess.Popen(['python', 'D:/PT/shell_seq.py'], stdout=subprocess.PIPE)
         # output = run.stdout.read()
         # print(output)
-        # # self.assertIsNotNone(output)
+        # self.assertIsNotNone(output)
 
 
 if __name__ == "__main__":
